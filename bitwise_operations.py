@@ -1,6 +1,7 @@
 import sys
 import json
 
+# This function validate if the input are numbers
 def validate_input(input_data):
     try:
         numbers = list(map(int, input_data.split(",")))
@@ -8,6 +9,7 @@ def validate_input(input_data):
     except ValueError:
         return None
 
+# This function makes the operations
 def bitwise_operations(numbers):
     bitwise_and = numbers[0]
     bitwise_or = numbers[0]
@@ -20,6 +22,7 @@ def bitwise_operations(numbers):
 
     return bitwise_and, bitwise_or, bitwise_xor
 
+# This function filter the numbers above the threshold
 def filter_numbers(numbers, threshold):
     filtered_numbers = [num for num in numbers if num > threshold]
     return filtered_numbers
